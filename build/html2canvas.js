@@ -1478,10 +1478,7 @@ html2canvas.prototype.getBounds = function(el){
     window.scroll(0,0);
         
     if (el.getBoundingClientRect){	
-        var bounds = el.getBoundingClientRect();	
-        bounds.top = bounds.top;
-        bounds.left = bounds.left;
-        return bounds;
+        return el.getBoundingClientRect();
     }else{
             
         // TODO remove jQuery dependancy
